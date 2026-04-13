@@ -6,7 +6,7 @@ import GiftSection from "./GiftSection";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-start pt-32 pb-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-start pt-24 pb-10 overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-yellow-600/10 rounded-full blur-[128px] animate-pulse" />
@@ -25,7 +25,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="mt-10 mb-6 px-6 py-2.5 rounded-full bg-gold-moving border border-white/20 flex items-center gap-3 shadow-[0_0_30px_rgba(191,149,63,0.4)]"
+            className="mt-4 mb-6 px-6 py-2.5 rounded-full bg-gold-moving border border-white/20 flex items-center gap-3 shadow-[0_0_30px_rgba(191,149,63,0.4)]"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>

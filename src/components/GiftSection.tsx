@@ -5,7 +5,7 @@ import { Download, Gift } from "lucide-react";
 
 export default function GiftSection() {
   return (
-    <section id="gift" className="py-12 relative overflow-hidden">
+    <section id="gift" className="pt-6 pb-6 relative overflow-hidden">
       <div className="container px-6">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
