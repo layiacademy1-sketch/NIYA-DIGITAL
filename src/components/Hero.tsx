@@ -98,7 +98,7 @@ export default function Hero() {
 
             {/* Button - Gold theme - Moved Up */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-6">
-              <a href="https://wa.me/33756858255" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <a href="https://wa.me/33756858255?text=Bonjour,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20formation." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto h-14 px-10 rounded-full bg-gold-moving text-black hover:scale-105 transition-transform text-sm md:text-base font-black uppercase tracking-wider shadow-[0_10px_30px_rgba(191,149,63,0.3)]">
                   Commencer maintenant
                   <ArrowRight className="ml-2 w-5 h-5" />
