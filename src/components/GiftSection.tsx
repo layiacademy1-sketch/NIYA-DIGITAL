@@ -26,7 +26,7 @@ export default function GiftSection() {
             
             <div className="mb-6" />
 
-            <a href="https://docdro.id/Nfp211Z" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/15nCJo0Am46nnvrNuOBcPbpucCseBbemB/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="h-12 px-8 rounded-full bg-gold-moving text-black hover:scale-105 transition-transform text-xs md:text-sm font-black uppercase tracking-wider group shadow-[0_10px_30px_rgba(191,149,63,0.3)]">
                 <Download className="mr-2 w-4 h-4 group-hover:translate-y-1 transition-transform" />
                 Télécharger gratuitement
