@@ -1,7 +1,5 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import GiftSection from "./components/GiftSection";
-import Services from "./components/Services";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -10,8 +8,6 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <GiftSection />
-        <Services />
       </main>
       <Footer />
     </div>

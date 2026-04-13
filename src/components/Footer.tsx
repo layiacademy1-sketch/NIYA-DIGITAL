@@ -4,20 +4,14 @@ export default function Footer() {
       <div className="container px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-white rounded flex items-center justify-center font-bold text-black text-lg">
+            <div className="w-8 h-8 bg-gold-moving rounded flex items-center justify-center font-black text-black text-lg">
               N
             </div>
-            <span className="text-lg font-bold tracking-tighter">NIA DIGITAL</span>
-          </div>
-
-          <div className="flex gap-8 text-sm text-white/40">
-            <a href="#" className="hover:text-white transition-colors">Mentions Légales</a>
-            <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
-            <a href="#" className="hover:text-white transition-colors">Conditions</a>
+            <span className="text-lg font-black tracking-tighter text-white">NIYA DIGITAL</span>
           </div>
 
           <p className="text-sm text-white/20">
-            © 2024 NIA Digital. Tous droits réservés.
+            © 2025 NIYA Digital. Tous droits réservés.
           </p>
         </div>
       </div>

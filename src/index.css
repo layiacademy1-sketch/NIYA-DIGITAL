@@ -64,18 +64,18 @@
     --card-foreground: oklch(0.98 0 0);
     --popover: oklch(0.1 0 0);
     --popover-foreground: oklch(0.98 0 0);
-    --primary: oklch(0.98 0 0);
+    --primary: oklch(0.75 0.15 75); /* Gold accent */
     --primary-foreground: oklch(0.1 0 0);
     --secondary: oklch(0.2 0 0);
     --secondary-foreground: oklch(0.98 0 0);
     --muted: oklch(0.2 0 0);
     --muted-foreground: oklch(0.6 0 0);
-    --accent: oklch(0.2 0 0);
-    --accent-foreground: oklch(0.98 0 0);
+    --accent: oklch(0.75 0.15 75); /* Gold accent */
+    --accent-foreground: oklch(0.1 0 0);
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(0.2 0 0);
     --input: oklch(0.2 0 0);
-    --ring: oklch(0.98 0 0);
+    --ring: oklch(0.75 0.15 75);
     --radius: 0.75rem;
 }
 
@@ -87,7 +87,7 @@
     @apply bg-background text-foreground antialiased;
     }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading tracking-tight;
+    @apply font-heading tracking-tight text-white;
   }
 }
 
@@ -96,7 +96,35 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/50;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-white/60;
+}
+
+.text-gold-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728];
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+.bg-gold-moving {
+  background: linear-gradient(
+    45deg,
+    #BF953F 0%,
+    #FCF6BA 45%,
+    #B38728 70%,
+    #FBF5B7 100%
+  );
+  background-size: 400% 400%;
+  animation: gold-move 8s ease infinite;
+}
+
+@keyframes gold-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
 }
 
 .instagram-gradient {
