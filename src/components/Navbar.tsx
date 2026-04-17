@@ -17,7 +17,6 @@ export default function Navbar() {
       
       <div className="hidden md:flex items-center gap-8 text-sm font-bold text-white/70">
         <a href="#home" className="hover:text-[#FCF6BA] transition-colors uppercase tracking-widest">Accueil</a>
-        <a href="#gift" className="hover:text-[#FCF6BA] transition-colors uppercase tracking-widest">Cadeau</a>
       </div>
     </motion.nav>
   );

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Reviews from "./Reviews";
-import GiftSection from "./GiftSection";
+import InfiniteCarousel from "./InfiniteCarousel";
 
 export default function Hero() {
   return (
@@ -34,7 +34,33 @@ export default function Hero() {
             <span className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] font-black text-black">DEVIENS UN EXPERT EN MARKETING DIGITAL</span>
           </motion.div>
 
-          <div className="flex flex-col items-center gap-6 w-full">
+          {/* Text Content moved here */}
+          <div className="mt-4 flex flex-col items-center px-4">
+            <div className="relative mb-6 text-center">
+              <h1 className="text-3xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tighter text-white uppercase italic">
+                Se lancer dans <br />
+                <span className="text-gold-gradient drop-shadow-[0_0_30px_rgba(191,149,63,0.2)]">Marketing</span> <br />
+                <span className="text-gold-gradient drop-shadow-[0_0_30px_rgba(191,149,63,0.2)]">Digital</span>
+              </h1>
+              <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-500/5 rounded-full blur-3xl -z-10" />
+            </div>
+            
+            <p className="text-base md:text-xl text-white mb-6 max-w-2xl mx-auto leading-relaxed border-l-2 border-[#BF953F]/50 pl-6 text-center md:text-left">
+              Nous accompagnons les personnes qui souhaitent se lancer dans le marketing digital afin de générer des revenus grâce aux réseaux sociaux.
+            </p>
+          </div>
+
+          {/* Infinite Carousel */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="w-full mb-8"
+          >
+            <InfiniteCarousel />
+          </motion.div>
+
+          <div className="flex flex-col items-center gap-6 w-full mt-4">
             {/* First photo fixed presentation */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -51,53 +77,11 @@ export default function Hero() {
                 />
               </div>
             </motion.div>
+            
+            <Reviews />
 
-            {/* Text Content - Optimized for mobile */}
-            <div className="mt-4 flex flex-col items-center px-4">
-              <div className="relative mb-6 text-center">
-                <motion.span 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="block text-lg md:text-2xl font-medium text-white mb-3 tracking-wide italic font-serif"
-                >
-                  La première formation en France pour
-                </motion.span>
-                
-                <h1 className="text-3xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tighter text-white uppercase italic">
-                  Se lancer dans <br />
-                  <span className="text-gold-gradient drop-shadow-[0_0_30px_rgba(191,149,63,0.2)]">Marketing</span> <br />
-                  <span className="text-gold-gradient drop-shadow-[0_0_30px_rgba(191,149,63,0.2)]">Digital</span>
-                </h1>
-
-                {/* Decorative background element for title */}
-                <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-500/5 rounded-full blur-3xl -z-10" />
-              </div>
-              
-              <p className="text-base md:text-xl text-white mb-6 max-w-2xl mx-auto leading-relaxed border-l-2 border-[#BF953F]/50 pl-6 text-center md:text-left">
-                Nous accompagnons les personnes qui souhaitent se lancer dans le marketing digital afin de générer des revenus grâce aux réseaux sociaux.
-              </p>
-            </div>
-
-            {/* Price Display - Moved Below Description */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-              className="flex flex-col items-center gap-2"
-            >
-              <div className="text-5xl md:text-7xl font-black text-white tracking-tighter flex items-start">
-                497<span className="text-gold-gradient text-2xl md:text-4xl mt-2 ml-1">€</span>
-              </div>
-              <div className="px-6 py-1.5 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
-                <p className="text-[10px] md:text-sm font-bold text-[#FCF6BA] uppercase tracking-[0.2em]">
-                  Paiement en 4x possible
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Button - Gold theme - Moved Up */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-6">
+            {/* Button - Gold theme - Moved Below Reviews */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-6 mt-4">
               <a href="https://wa.me/33756858255?text=Bonjour,%20je%20suis%20int%C3%A9ress%C3%A9(e)%20par%20la%20formation." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto h-14 px-10 rounded-full bg-gold-moving text-black hover:scale-105 transition-transform text-sm md:text-base font-black uppercase tracking-wider shadow-[0_10px_30px_rgba(191,149,63,0.3)]">
                   Commencer maintenant
@@ -105,12 +89,6 @@ export default function Hero() {
                 </Button>
               </a>
             </div>
-
-            {/* Reviews Section */}
-            <Reviews />
-
-            {/* Gift Section - Moved here */}
-            <GiftSection />
           </div>
         </motion.div>
       </div>
