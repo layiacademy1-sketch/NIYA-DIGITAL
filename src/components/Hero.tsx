@@ -4,7 +4,11 @@ import { ArrowRight } from "lucide-react";
 import Reviews from "./Reviews";
 import InfiniteCarousel from "./InfiniteCarousel";
 
-export default function Hero() {
+interface HeroProps {
+  onShowCatalogue: () => void;
+}
+
+export default function Hero({ onShowCatalogue }: HeroProps) {
   return (
     <section id="home" className="relative min-h-screen flex flex-col items-center justify-start pt-24 pb-10 overflow-hidden">
       {/* Dynamic Background */}
@@ -55,9 +59,26 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="w-full mb-8"
+            className="w-full mb-6"
           >
             <InfiniteCarousel />
+          </motion.div>
+
+          {/* New Button giving access to all modules */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="mb-12 w-full px-4 md:px-0 flex justify-center"
+          >
+            <Button 
+              onClick={onShowCatalogue}
+              variant="outline" 
+              className="w-full max-w-xs md:max-w-none md:w-auto rounded-full border-[#FCF6BA]/30 bg-white/5 hover:bg-gold-moving hover:text-black text-[#FCF6BA] px-4 md:px-8 h-12 uppercase font-black text-[10px] md:text-xs tracking-[0.1em] md:tracking-[0.2em] transition-all shadow-[0_0_20px_rgba(191,149,63,0.1)] hover:shadow-[0_0_30px_rgba(191,149,63,0.3)]"
+            >
+              Voir toutes nos formations
+              <ArrowRight className="ml-2 w-3.5 h-3.5 md:w-4 md:h-4" />
+            </Button>
           </motion.div>
 
           <div className="flex flex-col items-center gap-6 w-full mt-4">
